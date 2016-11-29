@@ -34,8 +34,9 @@ cordova project.  There is still some Java setup required.
     webView.loadUrl(parser.getLaunchUrl());
 ```
 
-### You will need to implement onDestroy if it hasn't already been implemented.  If it has, just 
-insert the contents of this method into your existing onDestroy
+### You will need to implement onDestroy if it hasn't already been implemented.  
+If it has, just insert the contents of this method into your existing onDestroy
+
 ```
     // This is still required by Cordova
     @Override
@@ -51,8 +52,8 @@ insert the contents of this method into your existing onDestroy
     }
 ```
 
-### The same goes for onActivityResult and onPluginPermissionResult.  If you are using plugins that require the use of intents
-please make sure that you are familiar with the Android Life Cycle and how to use Cordova in this way.
+### The same goes for onActivityResult and onPluginPermissionResult.  
+If you are using plugins that require the use of intents please make sure that you are familiar with the Android Life Cycle and how to use Cordova in this way.
 
 ```
     /**
