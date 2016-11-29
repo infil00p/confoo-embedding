@@ -5,7 +5,7 @@ This is a simple example of how to embed Cordova in a view.  Right now the plugi
 sets up the libraries, the Node JS plugin system and the config.xml so that the project is a 
 cordova project.  There is still some Java setup required.
 
-1. Add a view to your layout.  In this example, we add it to res/layouts/content_mail.xml
+### Add a view to your layout.  In this example, we add it to res/layouts/content_mail.xml
 
 ```
     <org.apache.cordova.engine.SystemWebView
@@ -14,14 +14,14 @@ cordova project.  There is still some Java setup required.
         android:layout_height="match_parent">
 ```
 
-2. In the MainActivity, add the following code to the class:
+### In the MainActivity, add the following code to the class:
 ```
     public CordovaWebView webInterface;
     private CordovaInterfaceImpl cordovaInterface = new CordovaInterfaceImpl(this);
     private String TAG = "ConFooActivity";
 ```
 
-3. Then add the following code to onCreate
+### Then add the following code to onCreate
 ```
     //Set up the webview
     ConfigXmlParser parser = new ConfigXmlParser();
@@ -34,7 +34,7 @@ cordova project.  There is still some Java setup required.
     webView.loadUrl(parser.getLaunchUrl());
 ```
 
-4.  You will need to implement onDestroy if it hasn't already been implemented.  If it has, just 
+### You will need to implement onDestroy if it hasn't already been implemented.  If it has, just 
 insert the contents of this method into your existing onDestroy
 ```
     // This is still required by Cordova
@@ -51,7 +51,7 @@ insert the contents of this method into your existing onDestroy
     }
 ```
 
-5. The same goes for onActivityResult and onPluginPermissionResult.  If you are using plugins that require the use of intents
+### The same goes for onActivityResult and onPluginPermissionResult.  If you are using plugins that require the use of intents
 please make sure that you are familiar with the Android Life Cycle and how to use Cordova in this way.
 
 ```
