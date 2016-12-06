@@ -7,7 +7,7 @@ cordova project.  There is still some Java setup required.
 
 ### Add a view to your layout.  In this example, we add it to res/layouts/content_mail.xml
 
-```
+```XML
     <org.apache.cordova.engine.SystemWebView
         android:id="@+id/WebViewComponent"
         android:layout_width="match_parent"
@@ -15,14 +15,14 @@ cordova project.  There is still some Java setup required.
 ```
 
 ### In the MainActivity, add the following code to the class:
-```
+```Java
     public CordovaWebView webInterface;
     private CordovaInterfaceImpl cordovaInterface = new CordovaInterfaceImpl(this);
     private String TAG = "ConFooActivity";
 ```
 
 ### Then add the following code to onCreate
-```
+```Java
     //Set up the webview
     ConfigXmlParser parser = new ConfigXmlParser();
     parser.parse(this);
@@ -37,7 +37,7 @@ cordova project.  There is still some Java setup required.
 ### You will need to implement onDestroy if it hasn't already been implemented.  
 If it has, just insert the contents of this method into your existing onDestroy
 
-```
+```Java
     // This is still required by Cordova
     @Override
     public void onDestroy()
